@@ -2,7 +2,7 @@
 /**
  * Telegram Bot access token и URL.
  */
-$access_token = '171103764:AAHanoqM99DJqk8IUFvBU0DJhUpSfnGG-qY';
+$access_token = '203318962:AAGmGjiyIGAF2pphUIduUmL6S0Bhe9yOZXE';
 $api = 'https://api.telegram.org/bot' . $access_token;
 
 /**
@@ -39,7 +39,7 @@ switch($message) {
     // App ID для OpenWeatherMap.
     $appid = 'ВАШ_ID';
     // ID для города/района/местности (есть все города РФ).
-    $id = '500776'; // Для примера: Петербург, север города.
+    $id = '2022890'; // Для примера: Петербург, север города.
     // Получаем JSON-ответ от OpenWeatherMap.
     $pogoda = json_decode(file_get_contents('http://api.openweathermap.org/data/2.5/weather?appid=' . $appid . '&id=' . $id . '&units=metric&lang=ru'), TRUE);
     // Определяем тип погоды из ответа и выводим соответствующий Emoji.
