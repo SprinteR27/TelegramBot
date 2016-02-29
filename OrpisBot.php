@@ -34,7 +34,7 @@ switch($message) {
   // @see http://openweathermap.org
   case '/pogoda':
     // ќтправл€ем приветственный текст.
-    $preload_text = 'ќдну секунду, ' . $first_name . ' ' . $emoji['preload'] . ' я уточн€ю дл€ вас погоду..';
+    $preload_text = 'ќдну секунду, ' . $first_name . ' ' . $emoji['preload'] . ' я уточн€ю дл€ ¬ас погоду..';
     sendMessage($chat_id, $preload_text);
     // App ID дл€ OpenWeatherMap.
     $appid = '¬јЎ_ID';
