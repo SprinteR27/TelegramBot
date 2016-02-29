@@ -67,6 +67,7 @@ switch($message) {
     sendMessage($chat_id, $weather_text);
     break;
   default:
+    sendMessage($chat_id, $message);
     break;
 }
 
