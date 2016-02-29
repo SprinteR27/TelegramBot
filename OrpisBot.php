@@ -37,11 +37,11 @@ switch($message) {
     $preload_text = 'Одну секунду, ' . $first_name . ' ' . $emoji['preload'] . ' Я уточняю для Вас погоду..';
     sendMessage($chat_id, $preload_text);
     // App ID для OpenWeatherMap.
-    $appid = 'ВАШ_ID';
+    $appid = 'f28216de7425bbee50e97bda8152a39b';
     // ID для города/района/местности (есть все города РФ).
     $id = '2022890'; // Для примера: Петербург, север города.
     // Получаем JSON-ответ от OpenWeatherMap.
-    $pogoda = json_decode(file_get_contents('http://api.openweathermap.org/data/2.5/weather?appid=' . $appid . '&id=' . $id . '&units=metric&lang=ru'), TRUE);
+    $pogoda = json_decode(file_get_contents('http://api.openweathermap.org/data/2.5/forecast/city?id=' . $id . '&appid=' . $appid . '&units=metric&lang=ru'), TRUE);
     // Определяем тип погоды из ответа и выводим соответствующий Emoji.
     if ($pogoda['weather'][0]['main'] === 'Clear') { $weather_type = $emoji['weather']['clear'] . ' ' . $pogoda['weather'][0]['description']; }
     elseif ($pogoda['weather'][0]['main'] === 'Clouds') { $weather_type = $emoji['weather']['clouds'] . ' ' . $pogoda['weather'][0]['description']; }
